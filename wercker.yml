@@ -54,3 +54,11 @@ deploy-to-kubernetes:
         gke-cluster-zone: $GKE_CLUSTER_ZONE
         gke-cluster-project: $GKE_CLUSTER_PROJECT
         command: apply -f $WERCKER_OUTPUT_DIR/kubernetes/
+        
+    after-steps:
+        - sherzberg/slack-notify:
+            subdomain: wercker
+            token: W2xRROY8WkZWlmYpx0kUWGbf
+            channel: "werckerbuildswayne"
+            username: wayne
+            icon_url: https://avatars3.githubusercontent.com/u/1695193?s=140
