@@ -9,7 +9,7 @@ app = Bottle()
 @app.route('/')
 def get_ip():
     client_ip = request.environ.get('REMOTE_ADDR')
-    return json.dumps({"Hello Cloud-Native Worlds, your client_ip is: ": client_ip})
+    return json.dumps({"Good morning Eleanor!, your client_ip is: ": client_ip})
 
 
 if __name__ == "__main__":
